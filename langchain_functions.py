@@ -20,7 +20,7 @@ def should_use_langchain():
 # 读取简历数据
 def read_resumes():
     # 读取resume文件夹中的所有文件
-    d_loader = DirectoryLoader("./resume", glob="*.pdf",loader_cls=PyPDFLoader)
+    d_loader = DirectoryLoader("resume", glob="*.pdf", loader_cls=PyPDFLoader)
 
     # 获取 PDF 文本，返回一个列表，列表中的每个元素都是一个 PDF 文档的页
     pdf_pages = d_loader.load()
